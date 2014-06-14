@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="container-fluid text-center">
+			<div class="pull-left"><button ng-click="navigate('/')" type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-chevron-left"></span> Back</button></div>
+			<strong>Hello Mean</strong>
+			<div class="pull-right"><button ng-click="navigate('/wineries-add')" type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> Add</button></div>
+		</div>
+	</div>
+	<div class="panel-body">
+		<input ng-model="query" type="text" class="form-control" placeholder="Enter filter">
+	</div>
+	<div class="list-group">
+		<a class="list-group-item" ng-repeat="winery in wineries | filter: query" ng-click="navigate('/wineries/' + winery._id)">{{winery.name}}<div class="pull-right"><span class="glyphicon glyphicon-chevron-right"></span></div></a>
+	</div>
+</div>

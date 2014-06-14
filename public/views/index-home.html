@@ -1,0 +1,17 @@
+<div ng-class="{'slider_menu': true, 'slider_menu-right': menuOpen} ">
+	<div class="list-group">
+		<a ng-click="logout()" class="list-group-item">Logout</a>
+	</div>
+</div>
+<div ng-class="{'panel': true, 'panel-default': true, 'slider_content': true, 'slider_content-right': menuOpen} ">
+	<div class="panel-heading">
+		<div class="container-fluid text-center">
+			<div class="pull-left"><button ng-click="toggleMenu()" type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-list"></span> Menu</button></div>
+			<strong>Hello Mean</strong>
+		</div>
+	</div>
+	<div class="list-group">
+		<a ng-click="navigate('/wineries')" class="list-group-item">Wineries<div class="pull-right"><span class="glyphicon glyphicon-chevron-right"></span></div></a>
+		<a ng-click="navigate('/wines')" class="list-group-item">Wines<div class="pull-right"><span class="glyphicon glyphicon-chevron-right"></span></div></a>
+	</div>
+</div>

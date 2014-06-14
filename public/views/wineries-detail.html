@@ -1,0 +1,46 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="container-fluid text-center">
+			<div class="pull-left"><button ng-click="navigate('/wineries')" type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-chevron-left"></span> Back</button></div>
+			<strong>Hello Mean</strong>
+			<div class="pull-right"><button ng-click="updateWinery()" type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-save"></span> Save</button></div>
+		</div>
+	</div>
+	<div class="panel-body">
+		<form class="form-horizontal" role="form">
+			<div ng-class="{'form-group': true, 'has-error': nameError}">
+				<label for="wineryName" class="col-xs-2 control-label">Name</label>
+				<div class="col-xs-10">
+					<input type="text" class="form-control" id="wineryName" ng-model="wineryName"  placeholder="name">
+				</div>
+			</div>
+		</form>
+		<div ng-if="hasWines" class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							Wines
+						</div>
+						<ul class="list-group">
+							<li class="list-group-item" ng-repeat="wine in wines">{{wine.name}}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="panel-footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-3 text-left">
+					<button ng-click="deleteWinery()" type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-remove-sign"></span> Delete</button>
+				</div>
+				<div class="col-xs-6 text-center"></div>
+				<div class="col-xs-3 text-right">
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
