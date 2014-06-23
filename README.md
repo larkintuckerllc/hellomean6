@@ -39,3 +39,15 @@ This example is just some basic CSS that I apply (triggering the slide animation
         left: 0px;
 }
 ```
+
+_Browser Compatibility_
+
+The two core frameworks are AngularJS and Bootstrap 3 with the intersection of their browser support as follows:
+
+IE 9, IE 10, and IE 11 (Windows)
+Firefox (Windows and MacOS)
+Safari (MacOS and IOS)
+Chrome (Windows, MacOS, IOS, and Android)
+
+
+note: Going to avoid messing with the stock Android browser.
